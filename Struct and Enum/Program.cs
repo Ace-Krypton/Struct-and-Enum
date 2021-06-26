@@ -48,11 +48,18 @@ namespace Struct_and_Enum
                     Console.WriteLine("You have to work");
                     break;
             }
+
+            foreach (var item in Enum.GetValues(typeof(Weekdays))) //In order to list your enum, you have to use foreach like this.
+            {
+                Console.WriteLine(item); //If you want to see the numbers, you have to use (int) -- Casting
+                Console.WriteLine((int)item); //This is for the numbers
+            }
+
         }
     }
 
     //Enum
-    public enum Weekdays //This is enum. It has some similarities with switch cases.
+    public enum Weekdays : int //This is enum. It has some similarities with switch cases.
     {
         Monday = 1, //On default this number is 0. But I declare it as a week days, so I changed it to 1.
         Tuesday,
