@@ -36,7 +36,7 @@ namespace Struct_and_Enum
         }
     }
 
-    interface TestForInterface //Interface
+    interface ITestForInterface //Interface
     {
         //Properties. Remember you cannot use fields in you interface.
         string Name { get; set; } //You have to use it without a access modifier
@@ -48,7 +48,7 @@ namespace Struct_and_Enum
         public int MyProperty { get; set; }
     }
 
-    struct Area : TestForInterface //Test -- We get an error because, structs cannot get an inheritance from structs or classes. They can only get inheritance from interfaces
+    struct Area : ITestForInterface //Test -- We get an error because, structs cannot get an inheritance from structs or classes. They can only get inheritance from interfaces
     {
         public int X; //Fields
         public int Y; //Fields
