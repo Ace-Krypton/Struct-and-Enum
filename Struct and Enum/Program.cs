@@ -32,9 +32,36 @@ namespace Struct_and_Enum
             //a3.MyProperty = 5; -- They are not working because we did not get an instance from a3 struct. You have to use new keyword in order to use properties and methods
             //Console.WriteLine(a3.GetNumber()); -- They are not working because we did not get an instance from a3 struct. You have to use new keyword in order to use properties and methods
 
+            int days = 6;
 
+            //Switch case
+            switch (days)
+            {
+                case (int)Weekdays.Saturday:
+                    Console.WriteLine("You have 2 days left");
+                    break;
+
+                case (int)Weekdays.Sunday:
+                    Console.WriteLine("You are on your last day");
+                    break;
+                default:
+                    Console.WriteLine("You have to work");
+                    break;
+            }
         }
     }
+
+    //Enum
+    public enum Weekdays //This is enum. It has some similarities with switch cases.
+    {
+        Monday = 1, //On default this number is 0. But I declare it as a week days, so I changed it to 1.
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday,
+        Sunday
+    };
 
     interface ITestForInterface //Interface
     {
